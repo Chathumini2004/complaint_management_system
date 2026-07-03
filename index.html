@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Safety & Complaints Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #fdfbf7;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .logo span {
+            color: #e67e22;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .main-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .portal-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 5px solid transparent;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .customer-card {
+            border-top-color: #27ae60;
+        }
+
+        .admin-card {
+            border-top-color: #2c3e50;
+        }
+
+        .icon-box {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .card-desc {
+            color: #7f8c8d;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.2s ease;
+            width: 80%;
+        }
+
+        .btn-customer {
+            background: #27ae60;
+            color: white;
+        }
+
+        .btn-customer:hover {
+            background: #219653;
+        }
+
+        .btn-admin {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .btn-admin:hover {
+            background: #1a252f;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            .main-title { font-size: 28px; }
+            .portal-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🍽️ FoodSafe<span>Portal</span></div>
+    </header>
+
+    <div class="container">
+        <h1 class="main-title">Welcome to Food Complaint Management System</h1>
+        <p class="subtitle">Please select your portal to continue</p>
+
+        <div class="portal-grid">
+            
+            <!-- Customer Portal -->
+            <div class="portal-card customer-card">
+                <div>
+                    <div class="icon-box">📝</div>
+                    <h2 class="card-title">Customer Portal</h2>
+                    <p class="card-desc">Is the food you purchased lacking in quality? Is it not clean enough? Send us your complaints or feedback. Your voice matters to us!</p>
+                </div>
+                <!-- ඔයාගේ customer-login.html එකට ලින්ක් කරා -->
+                <a href="customer-login.html" class="btn btn-customer">Customer Login / Register</a>
+            </div>
+
+            <!-- Admin Portal -->
+            <div class="portal-card admin-card">
+                <div>
+                    <div class="icon-box">🛡️</div>
+                    <h2 class="card-title">Admin Dashboard</h2>
+                    <p class="card-desc">Access here to review and manage customer complaints and take necessary action.</p>
+                </div>
+                <!-- ඔයාගේ admin-login.html එකට ලින්ක් කරා -->
+                <a href="admin-login.html" class="btn btn-admin">Admin Login</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Food Complaints Management System. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
